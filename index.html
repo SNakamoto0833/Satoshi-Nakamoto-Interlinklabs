@@ -1,165 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Satoshi Nakamoto | InterLinkLabs — Official overview of the InterLink Genesis Token ($ITLG), the foundation of the Human Network. Built on transparency, trust, and verified participation.">
-  <meta property="og:title" content="Satoshi Nakamoto | InterLinkLabs — $ITLG Genesis Token" />
-  <meta property="og:description" content="In a world of manipulation, transparency is the new revolution. $ITLG brings verified humanity to blockchain." />
-  <meta property="og:image" content="https://3362399539-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FT3bbO6eJvmb60vtcjK1F%2Fuploads%2FVlppMSogN0zGVslqfNgF%2F%24ITLG.png?alt=media" />
-  <meta property="og:type" content="website" />
-  <title>Satoshi Nakamoto | InterLinkLabs — InterLink Genesis Token ($ITLG)</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>InterLink | Satoshi Nakamoto Family — Human Network</title>
+  <meta name="description" content="InterLink Labs — Building a verified human network powered by $ITLG. Learn about InterLink Wallet, DAO governance, ITLX exchange, $ITL and $ITLG tokenomics." />
+  <meta property="og:title" content="InterLink | Satoshi Nakamoto Family — Human Network" />
+  <meta property="og:description" content="In a world of manipulation, transparency is the new revolution. InterLink brings verified humanity to Web3." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1600&q=80" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #0d0d0d;
-      color: #f0f0f0;
-      margin: 0;
-      padding: 0;
-      line-height: 1.7;
-      scroll-behavior: smooth;
+    :root{
+      --bg:#ffffff;
+      --panel:#fafafa;
+      --muted:#333;
+      --accent:#0056ff;
+      --accent-2:#00a89f;
+      --glass: rgba(0,0,0,0.04);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:var(--bg);
+      color:var(--muted);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
     }
 
-    header {
-      text-align: center;
-      padding: 4rem 1rem;
-      background: linear-gradient(90deg, #0056ff, #00ffd5);
-      color: white;
-    }
+    /* NAV */
+    nav{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid #eee;background:#fff;position:sticky;top:0;z-index:60}
+    .brand{font-weight:700;color:var(--muted);text-decoration:none}
+    .nav-links{display:flex;gap:14px;list-style:none;margin:0;padding:0}
+    .nav-links a{color:var(--muted);text-decoration:none;font-weight:600}
+    .nav-right{display:flex;gap:8px}
+    .social-btn{padding:8px 10px;border-radius:8px;text-decoration:none;font-weight:600;border:1px solid rgba(0,0,0,0.06)}
+    .social-btn.x{color:#111;background:#eaf8ff;border-color:rgba(0,86,255,0.12)}
+    .social-btn.telegram{color:#fff;background:#0088cc;border-color:rgba(0,136,204,0.12)}
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
+    /* HERO */
+    .hero{max-width:1200px;margin:32px auto;padding:36px;border-radius:12px;background:linear-gradient(180deg,#ffffff,#fbfcfe);box-shadow:0 8px 30px rgba(18,38,63,0.06)}
+    .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+    .hero h1{font-size:1.8rem;margin:0;color:var(--muted)}
+    .byline{color:#666;margin-top:6px}
+    .lead{margin-top:18px;color:#444}
+    .cta-group{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700;box-shadow:0 8px 20px rgba(0,120,255,0.08)}
+    .btn-outline{background:transparent;color:var(--muted);padding:10px 14px;border-radius:8px;border:1px solid #eee;text-decoration:none;font-weight:600}
 
-    header p {
-      font-size: 1.2rem;
-    }
+    .hero-illus img{width:100%;height:320px;object-fit:cover;border-radius:10px;border:1px solid #f0f0f0}
 
-    nav {
-      background: #0f0f0f;
-      text-align: center;
-      padding: 1rem 0;
-      border-bottom: 1px solid #1a1a1a;
-    }
+    /* CONTENT SECTIONS */
+    main{max-width:1100px;margin:28px auto;padding:0 18px}
+    section.block{background:var(--panel);padding:22px;border-radius:10px;margin-bottom:18px;border:1px solid #f0f0f0}
+    section.block h2{color:var(--accent);margin-top:0}
+    .two-col{display:grid;grid-template-columns:1fr 420px;gap:18px;align-items:center}
+    .two-col.reverse{grid-template-columns:420px 1fr}
+    .two-col img{width:100%;height:220px;object-fit:cover;border-radius:8px}
+    .token-grid{display:grid;grid-template-columns:1fr 340px;gap:18px;align-items:start}
+    ul{padding-left:18px}
+    .muted{color:#666}
 
-    nav a {
-      color: #00ffd5;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: 600;
-      transition: 0.3s;
-    }
+    /* HIGHLIGHT BOX */
+    .panel-accent{background:linear-gradient(90deg,#f0fbff,#f3fff9);border:1px solid #e6f9f6;padding:14px;border-radius:8px;color:#083b3b}
 
-    nav a:hover {
-      color: #0056ff;
-    }
+    footer{max-width:1100px;margin:18px auto;padding:18px;color:#666;border-top:1px solid #eee;text-align:center}
 
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: #121212;
-      border-radius: 16px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.5);
-    }
-
-    h2, h3 {
-      color: #00ffd5;
-    }
-
-    ul {
-      list-style-type: "💠 ";
-      margin-left: 1rem;
-    }
-
-    img {
-      width: 100%;
-      border-radius: 12px;
-      margin: 1.5rem 0;
-    }
-
-    .highlight {
-      background: linear-gradient(90deg, #00ffd5, #0056ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 600;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #999;
-      border-top: 1px solid #1f1f1f;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      section {
-        padding: 1.5rem;
-      }
+    @media (max-width:900px){
+      .hero-grid,.two-col,.token-grid{grid-template-columns:1fr}
+      .hero-illus img{height:180px}
     }
   </style>
 </head>
 <body>
+  <!-- NAV -->
   <nav>
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#itlg">ITLG Token</a>
-    <a href="#vision">Vision</a>
-  </nav>
+    <a class="brand" href="index.html">Satoshi Nakamoto | InterLinkLabs</a>
 
-  <header>
-    <h1>Satoshi Nakamoto | InterLinkLabs</h1>
-    <p>The Future of Verified Human Networks — Powered by $ITLG</p>
-  </header>
-
-  <section id="about">
-    <h2>In a World of Manipulation, <span class="highlight">Transparency Is the New Revolution</span></h2>
-    <p><em>By the Official InterLink Representative of the Satoshi Nakamoto Family</em></p>
-
-    <h3>🪙 The Legacy of Bitcoin</h3>
-    <p>Bitcoin decentralized money — proving freedom could be programmed and trust could be verified by code.</p>
-
-    <h3>⚙️ The Vision of Ethereum</h3>
-    <p>Ethereum extended that vision — making blockchain programmable, giving rise to DAOs, DeFi, and NFTs.</p>
-
-    <h3>🌐 InterLinkLabs: The Human Network</h3>
-    <p>InterLinkLabs combines Bitcoin’s trustless foundation and Ethereum’s smart innovation to create a verified Human Network — real users, not bots.</p>
-  </section>
-
-  <section id="itlg">
-    <h2>💠 Introducing InterLink Genesis Token ($ITLG)</h2>
-    <p>$ITLG is minted through verified human activity and represents authenticity, participation, and contribution across the InterLink ecosystem.</p>
-
-    <h3>🔥 Burning Mechanism</h3>
-    <p>Each transaction within the ecosystem activates a <strong>burning mechanism</strong> — permanently removing a portion of $ITLG from circulation.</p>
-    <p>This ensures <strong>deflationary growth</strong> — balancing expansion with scarcity to maintain long-term value and stability.</p>
-
-    <h3>📊 Allocation</h3>
-    <img src="https://3362399539-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FT3bbO6eJvmb60vtcjK1F%2Fuploads%2FVlppMSogN0zGVslqfNgF%2F%24ITLG.png?alt=media&token=ed76f946-abf3-4a8f-8d33fa07ed8e" alt="$ITLG Allocation Chart">
-    <img src="https://3362399539-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FT3bbO6eJvmb60vtcjK1F%2Fuploads%2FlKDKpZixFzvFRw6TxP8b%2FHuman%20Node%20Miners.png?alt=media&token=b8f13bb1-0834-4cdd-b418-a306ca56e4b4" alt="Human Node Miners Diagram">
-  </section>
-
-  <section id="vision">
-    <h2>⚡ Evolution of Decentralization</h2>
-    <ul>
-      <li>Bitcoin — Decentralized Money</li>
-      <li>Ethereum — Decentralized Innovation</li>
-      <li>InterLinkLabs — Decentralized Humanity</li>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="wallet.html">Wallet</a></li>
+      <li><a href="dao.html">DAO</a></li>
+      <li><a href="itlx.html">ITLX</a></li>
+      <li><a href="token.html">Tokens</a></li>
+      <li><a href="itl.html">ITL</a></li>
     </ul>
 
-    <h3>🌍 Vision Forward</h3>
-    <p>Our mission is to connect <strong>1 billion verified humans</strong> under one interoperable, transparent network. Once $ITLG reaches maximum supply, the <strong>InterLink DAO</strong> will decide its future — preserve scarcity or expand reach. That is true decentralization.</p>
-  </section>
+    <div class="nav-right">
+      <a class="social-btn x" href="https://x.com/S_Nakamoto0833" target="_blank" rel="noopener">X</a>
+      <a class="social-btn telegram" href="https://t.me/Satoshi_Nakamoto0833" target="_blank" rel="noopener">Telegram</a>
+    </div>
+  </nav>
 
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-grid">
+      <div>
+        <h1>“In a world of manipulation, <br><strong style="color:#222">transparency is the new revolution.</strong>”</h1>
+        <p class="byline">— Satoshi Nakamoto</p>
+        <p class="lead">
+          As the official representative of <a href="https://x.com/inter_link" target="_blank" rel="noopener">@inter_link</a> in the Satoshi Nakamoto Family,
+          InterLink advances the Web3 legacy — from Bitcoin’s trustless foundation, to Ethereum’s smart innovation, now into a verified Human Network.
+        </p>
+
+        <div class="cta-group">
+          <a class="btn-primary" href="token.html">Explore $ITLG</a>
+          <a class="btn-outline" href="wallet.html">InterLink Wallet</a>
+          <a class="btn-outline" href="dao.html">DAO Governance</a>
+        </div>
+
+        <div style="margin-top:14px;color:#666;font-size:0.95rem">
+          <strong>Official profiles:</strong>
+          <span class="muted">X: </span><a href="https://x.com/S_Nakamoto0833" target="_blank" rel="noopener">@S_Nakamoto0833</a>
+          &nbsp; • &nbsp;
+          <span class="muted">Telegram: </span><a href="https://t.me/Satoshi_Nakamoto0833" target="_blank" rel="noopener">Satoshi_Nakamoto0833</a>
+        </div>
+      </div>
+
+      <figure class="hero-illus" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1600&q=80" alt="Abstract human network">
+      </figure>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main>
+    <!-- Bitcoin -->
+    <section class="block" id="bitcoin">
+      <h2>🪙 Bitcoin — The Birth of Digital Freedom</h2>
+      <div class="two-col">
+        <div>
+          <p><strong>Year: 2009</strong><br>
+            Satoshi Nakamoto launched Bitcoin as the first peer-to-peer electronic cash system that achieved decentralization without trusted third parties.
+            Bitcoin introduced a simple but powerful idea: use cryptography and consensus to replace centralized intermediaries. The result is a durable,
+            censorship-resistant store of value available to anyone with a device and internet access.</p>
+
+          <p><strong>Core lessons from Bitcoin:</strong></p>
+          <ul>
+            <li>Trustless consensus — security via distributed protocol and miner consensus.</li>
+            <li>Scarcity by design — limited supply preserves value over time.</li>
+            <li>Permissionless access — anyone can participate without asking permission.</li>
+          </ul>
+        </div>
+
+        <div>
+          <img src="https://images.unsplash.com/photo-1627328715728-7bcc1b5db87d?auto=format&fit=crop&w=1600&q=80" alt="Bitcoin">
+        </div>
+      </div>
+    </section>
+
+    <!-- Ethereum -->
+    <section class="block" id="ethereum">
+      <h2>⚙️ Ethereum — The Era of Smart Innovation</h2>
+      <div class="two-col reverse">
+        <div>
+          <img src="https://images.unsplash.com/photo-1620117650992-eec9a1b06b18?auto=format&fit=crop&w=1600&q=80" alt="Ethereum">
+        </div>
+        <div>
+          <p><strong>Year: 2015</strong><br>
+            Ethereum extended blockchain from value transfer to programmable state. Smart contracts opened the door to decentralized finance (DeFi),
+            token economies, DAOs, and composable on-chain applications — transforming blockchain into a general-purpose platform for open innovation.</p>
+
+          <p><strong>Core lessons from Ethereum:</strong></p>
+          <ul>
+            <li>Programmability — code becomes governance and economic logic.</li>
+            <li>Composability — independent protocols can interoperate and build on one another.</li>
+            <li>Permissionless innovation — anyone can deploy new services and tokens.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- InterLink -->
+    <section class="block" id="interlink">
+      <h2>🌐 InterLink — The Rise of the Human Network</h2>
+      <div class="two-col">
+        <div>
+          <p>
+            InterLink is the next evolutionary step: a human-first layer that verifies identity without centralized custody or invasive KYC.
+            By combining cryptographic verification, reputation signals, and community-driven processes, InterLink creates a Sybil-resistant Human Network.
+            This network is optimized for real people — not bots or automated entities — and unlocks new classes of applications that require trustworthy human participation.
+          </p>
+
+          <div class="panel-accent" style="margin-top:12px">
+            <strong>Human-first capabilities:</strong>
+            <ul>
+              <li>Verified human wallets (non-custodial)</li>
+              <li>Human-gated mini-apps and marketplaces</li>
+              <li>On-chain reputation & referral systems</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1600&q=80" alt="Human network">
+        </div>
+      </div>
+    </section>
+
+    <!-- ITLG -->
+    <section class="block" id="itlg">
+      <h2>💠 InterLink Genesis Token — $ITLG</h2>
+
+      <div class="token-grid">
+        <div>
+          <p><strong>What it is:</strong> $ITLG is a utility and governance token minted by verified humans. It represents participation, contribution, and the right to shape the InterLink ecosystem.</p>
+
+          <h3>Held by — Human Nodes & Miners</h3>
+          <p>Only verified human participants (Human Nodes) who engage with the platform earn $ITLG via contribution, referrals, and verified activity.</p>
+
+          <h3>Utility</h3>
+          <ul>
+            <li>🗳 DAO Voting Power — vote on proposals and protocol parameters.</li>
+            <li>💎 Ecosystem Incentives — receive rewards for building and participating.</li>
+            <li>🚀 Launchpad & Whitelists — priority access to partner projects.</li>
+            <li>💰 Mini-App Payments — spend $ITLG inside InterLink’s mini-app ecosystem.</li>
+          </ul>
+        </div>
+
+        <div>
+          <img src="https://images.unsplash.com/photo-1620603479155-d7d16835cb8e?auto=format&fit=crop&w=1600&q=80" alt="ITLG concept">
+        </div>
+      </div>
+
+      <h3 style="margin-top:14px">Burning Mechanism</h3>
+      <p>
+        The $ITLG economy includes an automatic, transparent burning mechanism: a small percentage of $ITLG used for transactions,
+        fees, and in-app purchases is permanently removed from supply on-chain. This creates a deflationary pressure that rewards long-term participation
+        and prevents uncontrolled inflation as utility scales.
+      </p>
+
+      <p class="muted" style="font-size:0.95rem">
+        Implementation note: burn rates and triggers will be governed by InterLink DAO proposals so holders decide the exact parameters over time.
+      </p>
+    </section>
+
+    <!-- ITL -->
+    <section class="block" id="itl">
+      <h2>💠 InterLink Token — $ITL (Human Currency)</h2>
+      <div class="two-col">
+        <div>
+          <p><strong>Purpose:</strong> $ITL is designed as a broadly distributed, human-owned currency for peer-to-peer payments and social economic activity between verified users.</p>
+
+          <h3>Why $ITL matters</h3>
+          <ul>
+            <li>Designed for global inclusivity — for people without bank accounts but with smartphones.</li>
+            <li>Earned via proof-of-personhood activities — one person, one account.</li>
+            <li>Used for micro-payments, humanitarian aid, education credits, and AI data compensation.</li>
+          </ul>
+
+          <h3>Use cases</h3>
+          <ul>
+            <li>NGO disbursements — targeted aid to verified recipients.</li>
+            <li>Microtask marketplaces — pay real humans for data labeling, surveys, and training AI models.</li>
+            <li>Peer-to-peer payments — trusted transfers with identity assurance.</li>
+          </ul>
+        </div>
+
+        <div>
+          <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=1600&q=80" alt="ITL currency">
+        </div>
+      </div>
+    </section>
+
+    <!-- ITLX -->
+    <section class="block" id="itlx">
+      <h2>💹 ITLX — Perpetual & Spot Exchange, Bridge</h2>
+      <p>
+        ITLX is the InterLink-native exchange infrastructure designed to offer CEX-class execution and UX with decentralized custody and composability.
+        It comprises three core modules:
+      </p>
+
+      <ul>
+        <li><strong>Perpetual Exchange:</strong> Permissionless perpetual contracts with deep liquidity and USDC settlement, optimized for multi-chain access and low slippage.</li>
+        <li><strong>Spot Exchange (Swap):</strong> Fast, non-custodial swaps with multi-source aggregated liquidity and cross-chain routing.</li>
+        <li><strong>ITLX Bridge:</strong> Secure, trust-minimized cross-chain transfers that enable assets to move seamlessly across Ethereum, Solana, Polygon, Base, and more.</li>
+      </ul>
+
+      <p class="muted">
+        ITLX supports developer SDKs, reliable off-chain oracles, and advanced risk-management features (cross-margin, dynamic funding rates, liquidation protections).
+      </p>
+    </section>
+
+    <!-- DAO -->
+    <section class="block" id="dao">
+      <h2>🏛️ InterLink DAO — Governance by Verified Humans</h2>
+
+      <p>
+        The InterLink DAO places governance power in the hands of <strong>verified human $ITLG holders</strong>. The DAO implements open proposal, discussion, and voting processes recorded on-chain for full transparency.
+      </p>
+
+      <h3>Governance mechanics (high-level)</h3>
+      <ul>
+        <li><strong>Proposal Phase:</strong> Community members submit proposals (governance changes, allocations, protocol updates).</li>
+        <li><strong>Discussion & Review:</strong> Proposals undergo a review period where stakeholders discuss impacts and adjustments.</li>
+        <li><strong>Voting:</strong> Verified $ITLG holders cast votes. Voting weight can reflect contribution and hold-time depending on DAO parameters.</li>
+        <li><strong>Execution:</strong> Once passed, proposals are executed on-chain automatically or via multisig as specified by the DAO rules.</li>
+      </ul>
+
+      <h3>Sybil resistance & fairness</h3>
+      <p>
+        Only human-verified accounts can participate in governance. This prevents bot attacks and plutocratic domination by ensuring votes come from legitimate individuals.
+        Future DAO proposals can further tune voting formulas (e.g., quadratic voting, time-weighted voting) to improve fairness.
+      </p>
+
+      <div class="panel-accent" style="margin-top:12px">
+        <strong>Key DAO responsibilities:</strong>
+        <ul>
+          <li>Set tokenomics (burn rates, supply parameters)</li>
+          <li>Approve ecosystem fund allocations and grants</li>
+          <li>Manage partnerships and bridge security policies</li>
+          <li>Oversee identity & verification protocol updates</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- GROWTH & CTA -->
+    <section class="block" id="growth">
+      <h2>📈 Growth, Allocation & Roadmap</h2>
+      <p>
+        <strong>Long-term target:</strong> 1 billion verified humans participating in an interoperable, on-chain Human Network.
+      </p>
+
+      <p>
+        <strong>Allocation principles (illustrative):</strong>
+        <ul>
+          <li>Human Node distribution: rewards for verified participation</li>
+          <li>Ecosystem fund: developer grants, integrations, launchpads</li>
+          <li>DAO treasury: governance and strategic reserves</li>
+          <li>Community & ambassador programs</li>
+        </ul>
+      </p>
+
+      <p class="muted">Exact percentages and on-chain allocation tables will be published in tokenomics pages and subject to DAO approval.</p>
+
+      <div style="margin-top:14px">
+        <a class="btn-primary" href="token.html">Read Full Tokenomics</a>
+        <a class="btn-outline" href="wallet.html">Launch InterLink Wallet (App)</a>
+      </div>
+    </section>
+
+    <!-- Closing -->
+    <section class="block" id="closing">
+      <h2>⚡ The Evolution Continues</h2>
+      <p>
+        Bitcoin = Decentralized Money. Ethereum = Decentralized Innovation. InterLink = Decentralized Humanity.
+        This is the evolution of trust — where verification meets value, and humans power the chain.
+      </p>
+      <p style="margin-top:12px;color:#555">Join our official channels: <a href="https://x.com/S_Nakamoto0833" target="_blank" rel="noopener">@S_Nakamoto0833</a> • <a href="https://t.me/Satoshi_Nakamoto0833" target="_blank" rel="noopener">Telegram</a></p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
   <footer>
-    <p>© 2025 Satoshi Nakamoto | InterLinkLabs — Built for the Human Network.</p>
+    <div style="max-width:1100px;margin:0 auto">
+      <p>© 2025 Satoshi Nakamoto Family | InterLinkLabs</p>
+      <p>Built for the Human Network • Follow <a href="https://x.com/S_Nakamoto0833" target="_blank" rel="noopener">@S_Nakamoto0833</a> • Join <a href="https://t.me/Satoshi_Nakamoto0833" target="_blank" rel="noopener">Telegram</a></p>
+    </div>
   </footer>
 </body>
 </html>
