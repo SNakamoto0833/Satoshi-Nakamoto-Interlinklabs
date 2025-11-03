@@ -135,6 +135,13 @@
                     onclick="showTab('post-governance')">
                     Top-of-Block Priority
                 </button>
+                <button
+                    class="tab-button py-3 px-4 text-center text-sm sm:text-base font-medium text-gray-500 hover:text-gray-700 focus:outline-none transition-colors duration-150 rounded-t-lg"
+                    data-target="post-market-snapshot"
+                    role="tab"
+                    onclick="showTab('post-market-snapshot')">
+                    Global Market Snapshot
+                </button>
             </nav>
         </div>
 
@@ -327,7 +334,7 @@
 
                     <hr class="my-8 border-gray-200">
 
-                    <h3 class="text-2xl font-bold post-title mb-4">
+                    <h3 class="text-2xl font-bold post-title mb-4 border-b border-gray-200 pb-2">
                         🔥 The Deflationary Nexus: $ITLG Burn Mechanism
                     </h3>
                     <p class="mb-4">
@@ -348,67 +355,79 @@
                 </div>
             </article>
 
-            <!-- POST 3: Governance & Top-of-Block Priority (EXPANDED CONTENT) --><article id="post-governance" class="article-tab card-shadow bg-white rounded-xl p-8 mb-10 hidden">
+            <!-- POST 4: Global Crypto Market Snapshot --><article id="post-market-snapshot" class="article-tab card-shadow bg-white rounded-xl p-8 mb-10 hidden">
                 <div class="mb-4 text-sm font-medium text-gray-500">
-                    <span class="text-base font-medium text-indigo-600 mr-2">GOVERNANCE & CHAIN</span> • October 18, 2025
+                    <span class="text-base font-medium text-purple-600 mr-2">MARKET ANALYSIS</span> • November 3, 2025
                 </div>
                 <h4 class="post-title text-3xl font-bold mb-3 hover:text-blue-700 cursor-pointer transition">
-                    Enforcing Authentic Agency: Top-of-Block Transaction Priority
+                    🌏 Global Crypto Market Snapshot – as of November 2025
                 </h4>
                 <div class="text-lg text-gray-700">
                     <p class="mb-6">
-                        In the evolving landscape of Web3, the integrity of a decentralized network hinges on its ability to distinguish genuine human activity from automated or malicious bot interference. The InterLink Chain addresses this fundamental challenge head-on with its groundbreaking Top-of-Block Transaction Priority mechanism, a direct manifestation of our Proof of Personhood (PoP) philosophy. This ensures that authentic human agency is not merely a theoretical ideal but a core, enforced principle of the network’s operation.
+                        Japan remains one of the most mature and regulated crypto markets in the world. Here’s a quick comparison with other major regions:
                     </p>
 
-                    <h3 class="text-2xl font-bold post-title mb-4 border-b border-gray-200 pb-2">
-                        The Challenge of Bots in Decentralized Systems
-                    </h3>
-                    <p class="mb-4">
-                        Traditional blockchains often treat all transactions equally, processing them based on gas fees or arrival time. While seemingly fair, this neutrality inadvertently opens the door to Sybil attacks, bot-driven market manipulation, and the distortion of decentralized governance. Automated actors can flood networks, inflate activity metrics, front-run human trades, or monopolize voting power, eroding trust and undermining the very principles of decentralization.
-                    </p>
+                    <div class="overflow-x-auto mb-10">
+                        <table class="min-w-full divide-y divide-gray-200 rounded-lg overflow-hidden border border-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Region</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Market Type</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Popular Tokens</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Adoption Trends</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Key Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Japan</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Mature & regulated</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">BTC, ETH, Stablecoins, FSA-approved local tokens</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Moderate DeFi, strong NFT/gaming adoption</td>
+                                    <td class="px-6 py-4 text-sm text-gray-500">Retail investors are cautious; FSA ensures compliance and security</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">United States</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Highly liquid, institutional</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">BTC, ETH, DeFi tokens, large altcoins</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Fast-growing DeFi & NFT adoption</td>
+                                    <td class="px-6 py-4 text-sm text-gray-500">Volatile market, highly speculative at times</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">South Korea</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">High retail engagement</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">BTC, ETH, Meme coins, Klaytn-based projects</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Active NFT & gaming community</td>
+                                    <td class="px-6 py-4 text-sm text-gray-500">Regulation growing but innovation fast-paced</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Southeast Asia</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Emerging & dynamic</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">BTC, ETH, USDT, local DeFi tokens</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Rapid DeFi & Web3 adoption</td>
+                                    <td class="px-6 py-4 text-sm text-gray-500">Young, tech-savvy population; speculative but highly innovative</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-                    <h3 class="text-2xl font-bold post-title mb-4 border-b border-gray-200 pb-2">
-                        How Top-of-Block Priority Works
+                    <h3 class="text-2xl font-bold post-title mb-4 border-b border-gray-200 pb-2 mt-8">
+                        Key Takeaways for Crypto Projects
                     </h3>
-                    <p class="mb-6">
-                        The InterLink Chain’s solution is embedded directly into its block construction algorithm. When a transaction is submitted, the network first verifies the sender's identity through their InterLink ID.
-                    </p>
                     <ul class="list-disc ml-6 space-y-2 mb-6">
-                        <li>Verified Human Transactions: Transactions originating from an InterLink ID-verified Human Node are identified as high-priority. These transactions are systematically elevated and placed at the "top" of upcoming blocks by the network's validators.</li>
-                        <li>Unverified/Automated Transactions: Transactions from addresses not linked to a verified InterLink ID, or those identified as automated (e.g., bot activity), are processed after human-verified transactions. They are relegated to lower priority slots within the block or, during periods of high network congestion, may experience delayed inclusion.</li>
+                        <li><span class="font-medium text-primary-blue">Japan:</span> Focus on compliance, security, and utility-driven projects; retail investors value transparency.</li>
+                        <li><span class="font-medium text-primary-blue">US:</span> Institutional adoption is high; innovation is fast but price volatility is significant.</li>
+                        <li><span class="font-medium text-primary-blue">South Korea:</span> NFT and gaming ecosystems thrive; community-driven hype is strong.</li>
+                        <li><span class="font-medium text-primary-blue">Southeast Asia:</span> Fast adoption of new tech; strong interest in DeFi and Web3 applications.</li>
                     </ul>
-                    <p class="mb-6">
-                        This dynamic prioritization ensures that real human activity, whether it's a critical governance vote, a social interaction in a Mini-App, or a time-sensitive financial transaction, consistently receives expedited processing.
-                    </p>
 
-                    <h3 class="text-2xl font-bold post-title mb-4 border-b border-gray-200 pb-2">
-                        Impact on InterLink Ecosystem and Web3
+                    <h3 class="text-2xl font-bold post-title mb-4 border-b border-gray-200 pb-2 mt-8">
+                        Why this matters for ITLX / ITL tokens
                     </h3>
-                    <h4 class="text-xl font-medium mt-6 mb-3 text-primary-blue">
-                        🛡 Sybil Resistance and Fair Governance
-                    </h4>
-                    <p class="mb-4">
-                        This mechanism is a cornerstone of InterLink's Sybil resistance. In DAOs and other governance models, Top-of-Block Priority fundamentally supports the "one person, one vote" principle by ensuring that only verifiable human votes are processed with the highest importance, effectively marginalizing attempts by malicious actors to amplify their influence through multiple accounts.
-                    </p>
-
-                    <h4 class="text-xl font-medium mt-6 mb-3 text-primary-blue">
-                        ⚡ Enhanced User Experience for Humans
-                    </h4>
-                    <p class="mb-4">
-                        For everyday users, this means a more responsive and fair network. Imagine a decentralized game where human actions are never outmaneuvered by bots, or a social platform where authentic interactions are always prioritized over spam. This system creates a more equitable and enjoyable digital experience.
-                    </p>
-
-                    <h4 class="text-xl font-medium mt-6 mb-3 text-primary-blue">
-                        🌐 A More Trustworthy Decentralized Web
-                    </h4>
-                    <p class="mb-6">
-                        By codifying human authenticity into the very fabric of transaction processing, InterLink sets a new standard for trust in decentralized networks. It creates an environment where value is genuinely aligned with human activity, fostering a more secure, transparent, and ultimately more human-centric Web3.
-                    </p>
-
-                    <p class="font-medium text-indigo-600 text-xl mt-8">
-                        Top-of-Block Priority is not just a technical feature; it is a declaration of InterLink's commitment to building a blockchain where real people always come first.
-                    </p>
-                    
+                    <ul class="list-disc ml-6 space-y-2 mb-6">
+                        <li>Japan’s compliance-first culture aligns with projects emphasizing security and regulatory clarity, making it an ideal market for sustainable adoption.</li>
+                        <li>Globally, ITLX/ITL can leverage DeFi, NFTs, and community trust to gain traction across markets that prioritize utility over hype.</li>
+                    </ul>
                 </div>
             </article>
         </div>
