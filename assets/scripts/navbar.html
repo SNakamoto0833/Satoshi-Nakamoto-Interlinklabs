@@ -1,17 +1,30 @@
 <nav class="navbar">
-  <div class="logo">
-    <a href="index.html">InterLink Labs</a>
+  <div class="nav-left">
+    <a class="brand" href="index.html">Satoshi Nakamoto | InterLinkLabs</a>
   </div>
+
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="wallet.html">Wallet</a></li>
     <li><a href="dao.html">DAO</a></li>
-    <li><a href="itlx.html">ITLX Exchange</a></li>
+    <li><a href="itlx.html">ITLX</a></li>
     <li><a href="token.html">Tokens</a></li>
-    <li><a href="itl.html">ITL – Human Currency</a></li>
+    <li><a href="itl.html">ITL</a></li>
   </ul>
-  <div class="social">
-    <a href="https://x.com/S_Nakamoto0833" target="_blank" class="social-btn x">X</a>
-    <a href="https://t.me/Satoshi_Nakamoto0833" target="_blank" class="social-btn telegram">Telegram</a>
+
+  <div class="nav-right">
+    <a class="social-btn x" href="https://x.com/S_Nakamoto0833" target="_blank" rel="noopener">X</a>
+    <a class="social-btn telegram" href="https://t.me/Satoshi_Nakamoto0833" target="_blank" rel="noopener">Telegram</a>
   </div>
 </nav>
+
+<style>
+/* minimal inline safety styling to guarantee nav is usable even before CSS loads */
+.navbar { display:flex; align-items:center; justify-content:space-between; padding:12px 18px; background:#070707; border-bottom:1px solid #111; }
+.nav-links { list-style:none; margin:0; padding:0; display:flex; gap:14px; }
+.nav-links a { color:#00ffd5; text-decoration:none; font-weight:600; }
+.brand { color:#e6f9f6; text-decoration:none; font-weight:700; }
+.social-btn { text-decoration:none; padding:6px 10px; border-radius:6px; font-weight:600; }
+.social-btn.x { color:#fff; background:transparent; border:1px solid rgba(0,255,213,0.12); }
+.social-btn.telegram { color:#fff; background:transparent; border:1px solid rgba(0,120,255,0.12); }
+</style>
