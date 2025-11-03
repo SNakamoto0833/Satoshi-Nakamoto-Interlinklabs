@@ -43,6 +43,13 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
+
+        /* Custom style for active tab */
+        .tab-button.active {
+            color: white;
+            background-color: var(--primary-blue);
+            border-bottom-color: transparent;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -104,234 +111,298 @@
     <!-- MAIN CONTENT AREA - ARTICLE LIST --><main id="recent-posts" class="container-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h3 class="text-4xl font-bold post-title mb-10 border-b-2 border-gray-300 pb-3">Recent Technical & Strategic Updates</h3>
 
-        <!-- POST 1: VISION & TOKENOMICS - NEW CONTENT --><article class="card-shadow bg-white rounded-xl p-8 mb-10">
-            <div class="mb-4 text-sm font-medium text-gray-500">
-                <span class="text-base font-medium text-yellow-600 mr-2">VISION & TOKENOMICS</span> • November 1, 2025
-            </div>
-            <h4 class="post-title text-3xl font-bold mb-3 hover:text-blue-700 cursor-pointer transition">
-                From Trustless Money to Verified Humanity: The Genesis of $ITLG
-            </h4>
-            <div class="text-lg text-gray-700">
-                
-                <p class="mb-6 italic border-l-4 border-primary-blue pl-4 text-gray-800">
-                    “In a world of manipulation, transparency is the new revolution.” — Satoshi Nakamoto
-                </p>
+        <!-- TAB NAVIGATION -->
+        <div class="mb-8 border-b border-gray-200">
+            <nav class="flex flex-wrap space-x-2 sm:space-x-4 -mb-px" role="tablist">
+                <button
+                    class="tab-button active py-3 px-4 text-center text-sm sm:text-base font-medium text-gray-500 hover:text-gray-700 focus:outline-none transition-colors duration-150 rounded-t-lg bg-gray-100"
+                    data-target="post-vision"
+                    role="tab"
+                    onclick="showTab('post-vision')">
+                    Vision & $ITLG Genesis
+                </button>
+                <button
+                    class="tab-button py-3 px-4 text-center text-sm sm:text-base font-medium text-gray-500 hover:text-gray-700 focus:outline-none transition-colors duration-150 rounded-t-lg"
+                    data-target="post-tokenomics"
+                    role="tab"
+                    onclick="showTab('post-tokenomics')">
+                    Dual Token Strategy
+                </button>
+                <button
+                    class="tab-button py-3 px-4 text-center text-sm sm:text-base font-medium text-gray-500 hover:text-gray-700 focus:outline-none transition-colors duration-150 rounded-t-lg"
+                    data-target="post-governance"
+                    role="tab"
+                    onclick="showTab('post-governance')">
+                    Top-of-Block Priority
+                </button>
+            </nav>
+        </div>
 
-                <p class="mb-6">
-                    As the official representative of @inter_link in the Satoshi Nakamoto Family, I carry a mission inspired by the evolution of Web3 — from Bitcoin’s trustless foundation, to Ethereum’s programmable world, now into InterLink’s verified human network.
-                </p>
-
-                <!-- The Web3 Evolution --><h5 class="text-xl font-medium text-primary-blue mt-8 mb-3 flex items-center">
-                    <span class="mr-2 text-2xl">🪙</span> Bitcoin: The Birth of Digital Freedom
-                </h5>
-                <p class="mb-6">
-                    In 2009, Satoshi Nakamoto introduced Bitcoin — a trustless, borderless monetary system built on transparency and mathematics. It gave the world its first digital store of value, proving that freedom can be coded and verified.
-                </p>
-
-                <h5 class="text-xl font-medium text-primary-blue mt-8 mb-3 flex items-center">
-                    <span class="mr-2 text-2xl">⚙️</span> Ethereum: The Era of Smart Innovation
-                </h5>
-                <p class="mb-6">
-                    Ethereum expanded Satoshi’s vision by introducing smart contracts, enabling developers to build decentralized ecosystems — from DeFi to NFTs. It turned blockchain into a programmable world, where trust became logic.
-                </p>
-
-                <h5 class="text-xl font-medium text-primary-blue mt-8 mb-3 flex items-center">
-                    <span class="mr-2 text-2xl">🌐</span> InterLink: The Rise of the Human Network
-                </h5>
-                <p class="mb-6">
-                    Now, we enter a new chapter — the Human Network. While Bitcoin decentralizes money and Ethereum decentralizes apps, InterLink decentralizes identity and participation. We’re building a network powered not by machines, but by verified humans — ensuring authenticity, transparency, and real engagement across the ecosystem.
-                </p>
-
-                <hr class="my-8 border-gray-200">
-
-                <!-- InterLink Genesis Token ($ITLG) Section --><h3 class="text-2xl font-bold post-title mb-4">
-                    💠 InterLink Genesis Token ($ITLG)
-                </h3>
-                <p class="mb-4">
-                    $ITLG represents the proof of humanity within InterLink — minted through verified participation, contribution, and loyalty. It is the heartbeat of the Human Network.
-                </p>
-
-                <h4 class="text-xl font-medium mt-6 mb-3">
-                    🧍‍♂️ Held by Human Nodes & Miners
+        <!-- ARTICLE CONTAINER -->
+        <div id="article-container">
+            <!-- POST 1: VISION & TOKENOMICS - NEW CONTENT --><article id="post-vision" class="article-tab card-shadow bg-white rounded-xl p-8 mb-10">
+                <div class="mb-4 text-sm font-medium text-gray-500">
+                    <span class="text-base font-medium text-yellow-600 mr-2">VISION & TOKENOMICS</span> • November 1, 2025
+                </div>
+                <h4 class="post-title text-3xl font-bold mb-3 hover:text-blue-700 cursor-pointer transition">
+                    From Trustless Money to Verified Humanity: The Genesis of $ITLG
                 </h4>
-                <p class="mb-2">
-                    Verified users who contribute to the ecosystem by:
-                </p>
-                <ul class="list-disc ml-6 space-y-1">
-                    <li>Engaging in activities and governance</li>
-                    <li>Verifying and referring real users</li>
-                    <li>Using and promoting InterLink applications</li>
-                </ul>
+                <div class="text-lg text-gray-700">
+                    
+                    <p class="mb-6 italic border-l-4 border-primary-blue pl-4 text-gray-800">
+                        “In a world of manipulation, transparency is the new revolution.” — Satoshi Nakamoto
+                    </p>
 
-                <h4 class="text-xl font-medium mt-6 mb-3">
-                    🔧 Utility of $ITLG
+                    <p class="mb-6">
+                        As the official representative of @inter_link in the Satoshi Nakamoto Family, I carry a mission inspired by the evolution of Web3 — from Bitcoin’s trustless foundation, to Ethereum’s programmable world, now into InterLink’s verified human network.
+                    </p>
+
+                    <!-- The Web3 Evolution --><h5 class="text-xl font-medium text-primary-blue mt-8 mb-3 flex items-center">
+                        <span class="mr-2 text-2xl">🪙</span> Bitcoin: The Birth of Digital Freedom
+                    </h5>
+                    <p class="mb-6">
+                        In 2009, Satoshi Nakamoto introduced Bitcoin — a trustless, borderless monetary system built on transparency and mathematics. It gave the world its first digital store of value, proving that freedom can be coded and verified.
+                    </p>
+
+                    <h5 class="text-xl font-medium text-primary-blue mt-8 mb-3 flex items-center">
+                        <span class="mr-2 text-2xl">⚙️</span> Ethereum: The Era of Smart Innovation
+                    </h5>
+                    <p class="mb-6">
+                        Ethereum expanded Satoshi’s vision by introducing smart contracts, enabling developers to build decentralized ecosystems — from DeFi to NFTs. It turned blockchain into a programmable world, where trust became logic.
+                    </p>
+
+                    <h5 class="text-xl font-medium text-primary-blue mt-8 mb-3 flex items-center">
+                        <span class="mr-2 text-2xl">🌐</span> InterLink: The Rise of the Human Network
+                    </h5>
+                    <p class="mb-6">
+                        Now, we enter a new chapter — the Human Network. While Bitcoin decentralizes money and Ethereum decentralizes apps, InterLink decentralizes identity and participation. We’re building a network powered not by machines, but by verified humans — ensuring authenticity, transparency, and real engagement across the ecosystem.
+                    </p>
+
+                    <hr class="my-8 border-gray-200">
+
+                    <!-- InterLink Genesis Token ($ITLG) Section --><h3 class="text-2xl font-bold post-title mb-4">
+                        💠 InterLink Genesis Token ($ITLG)
+                    </h3>
+                    <p class="mb-4">
+                        $ITLG represents the proof of humanity within InterLink — minted through verified participation, contribution, and loyalty. Its status is backed by a system combining the Ambassadors Credit Score (ACS) and Human Credit Score (HCS). It is the heartbeat of the Human Network.
+                    </p>
+
+                    <h4 class="text-xl font-medium mt-6 mb-3">
+                        🧍‍♂️ Held by Human Nodes & Miners
+                    </h4>
+                    <p class="mb-2">
+                        Verified users who contribute to the ecosystem by:
+                    </p>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>Engaging in activities and governance</li>
+                        <li>Verifying and referring real users</li>
+                        <li>Using and promoting InterLink applications</li>
+                    </ul>
+
+                    <h4 class="text-xl font-medium mt-6 mb-3">
+                        🔧 Utility of $ITLG
+                    </h4>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>🗳 DAO Voting Power — Shape ecosystem decisions collectively.</li>
+                        <li>💎 Ecosystem Incentives — Earn rewards from partner projects.</li>
+                        <li>🚀 Launchpad Access — Priority whitelist and allocation for new launches.</li>
+                        <li>💰 Mini-App Payments — Spend $ITLG within games, tools, and services across InterLink.</li>
+                        <li>🔗 ITLX Wallet Bridge — Conversion mechanism to access the high-velocity $ITL utility layer.</li>
+                    </ul>
+
+                    <h4 class="text-xl font-medium mt-6 mb-3">
+                        🔥 Burning Mechanism: Sustaining Long-Term Value
+                    </h4>
+                    <p class="mb-4">
+                        To ensure the stability and long-term growth of the ecosystem, $ITLG integrates a deflationary burn model. A portion of $ITLG used in ecosystem transactions (like app purchases, fees, or mini-app payments) will be automatically burned, permanently removing it from circulation.
+                    </p>
+                    <p class="mb-4">
+                        This creates a balance between:
+                    </p>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>⚖️ Utility Expansion — as more apps and users join</li>
+                        <li>🔥 Supply Reduction — preserving scarcity and long-term value</li>
+                    </ul>
+                    <p class="mb-6 font-medium">
+                        Through this mechanism, InterLink aligns value with real human activity, not artificial inflation.
+                    </p>
+
+                    <h4 class="text-xl font-medium mt-6 mb-3">
+                        📊 Allocation & Growth
+                    </h4>
+                    <p class="mb-6">
+                        Our long-term goal: 1 billion verified users. Once $ITLG reaches its maximum supply, holders will decide via DAO whether to maintain a fixed supply or expand strategically to welcome new Human Nodes — ensuring growth guided by collective governance.
+                    </p>
+
+                    <!-- Conclusion --><h5 class="text-2xl font-medium post-title mt-8 mb-4">
+                        ⚡ The Evolution Continues
+                    </h5>
+                    <ul class="list-disc ml-6 space-y-1 mb-6">
+                        <li>Bitcoin — Decentralized Money 💰</li>
+                        <li>Ethereum — Decentralized Innovation ⚙️</li>
+                        <li>InterLink — Decentralized Humanity 🌍</li>
+                    </ul>
+                    <p class="mb-4 text-xl">
+                        This is not just another blockchain story — It’s the evolution of trust itself.
+                    </p>
+                    <p class="font-medium text-primary-blue text-xl">
+                        InterLink is where verification meets value, and humans power the chain. 💫
+                    </p>
+                </div>
+            </article>
+
+            <!-- POST 2: Tokenomics Update (EXPANDED CONTENT) --><article id="post-tokenomics" class="article-tab card-shadow bg-white rounded-xl p-8 mb-10 hidden">
+                <div class="mb-4 text-sm font-medium text-gray-500">
+                    <span class="text-base font-medium text-green-600 mr-2">TOKENOMICS</span> • October 25, 2025
+                </div>
+                <h4 class="post-title text-3xl font-bold mb-3 hover:text-blue-700 cursor-pointer transition">
+                    Clarifying $ITL and $ITLG: The Dual Token Strategy
                 </h4>
-                <ul class="list-disc ml-6 space-y-1">
-                    <li>🗳 DAO Voting Power — Shape ecosystem decisions collectively.</li>
-                    <li>💎 Ecosystem Incentives — Earn rewards from partner projects.</li>
-                    <li>🚀 Launchpad Access — Priority whitelist and allocation for new launches.</li>
-                    <li>💰 Mini-App Payments — Spend $ITLG within games, tools, and services across InterLink.</li>
-                </ul>
+                <div class="text-lg text-gray-700">
+                    <p class="mb-6">
+                        The InterLink ecosystem is built upon a secure, balanced dual-token strategy designed to separate the daily function of currency from the long-term governance and scarcity of ownership. This ensures that the network can scale its utility without compromising the value proposition of its foundational, human-backed layer.
+                    </p>
 
-                <h4 class="text-xl font-medium mt-6 mb-3">
-                    🔥 Burning Mechanism: Sustaining Long-Term Value
+                    <h3 class="text-2xl font-bold post-title mb-4 border-b border-gray-200 pb-2">
+                        $ITL: The InterLink Utility Token (Human Currency)
+                    </h3>
+                    <p class="mb-4">
+                        $ITL is the essential medium of exchange—the Human Currency—within the InterLink ecosystem. It is designed for high volume, continuous circulation, enabling all interactions and transactions between verified and unverified users alike.
+                    </p>
+
+                    <h4 class="text-xl font-medium mt-6 mb-3 text-primary-blue">
+                        🛠 Primary Utility
+                    </h4>
+                    <ul class="list-disc ml-6 space-y-2 mb-6">
+                        <li>Network Fees: Paying gas and transaction fees on the InterLink Chain.</li>
+                        <li>Mini-App Marketplace: Purchasing games, tools, subscriptions, and services from developers building within the network.</li>
+                        <li>Inter-Ecosystem Payments: Facilitating P2P payments and commerce between users and businesses authenticated by InterLink ID.</li>
+                        <li>Incentives: Used as a standard reward for basic network participation.</li>
+                    </ul>
+
+                    <hr class="my-8 border-gray-200">
+
+                    <h3 class="text-2xl font-bold post-title mb-4 border-b border-gray-200 pb-2">
+                        $ITLG: The InterLink Genesis Token (Proof of Humanity)
+                    </h3>
+                    <p class="mb-4">
+                        $ITLG is the scarce, foundational asset of the network, reserved specifically for Human Nodes (verified InterLink ID holders). It represents ownership, long-term commitment, and direct influence over the network's future.
+                    </p>
+
+                    <h4 class="text-xl font-medium mt-6 mb-3 text-primary-blue">
+                        🏛 Governance & Scarcity
+                    </h4>
+                    <ul class="list-disc ml-6 space-y-2 mb-6">
+                        <li>DAO Voting Power: Exclusive right to vote on core protocol upgrades, treasury allocation, and major strategic decisions. (Enforces the one-person, one-vote principle).</li>
+                        <li>Staking Collateral: Required to stake and run a Human Node, securing the network and earning rewards.</li>
+                        <li>Premium Access: Unlocking advanced features, priority queueing, and exclusive access to new ecosystem launches.</li>
+                        <li>Loyalty Rewards: Earned primarily through sustained, verified participation and referrals.</li>
+                    </ul>
+
+                    <h4 class="text-xl font-medium mt-6 mb-3 text-primary-blue">
+                        ✅ Verification & Credit Scoring
+                    </h4>
+                    <p class="mb-4">
+                        $ITLG holders are continuously verified via the Security Group mechanism, which uses a proprietary system combining the Ambassadors Credit Score (ACS) and Human Credit Score (HCS). This score is earned through positive network activity, validating genuine human agency and increasing the holder's standing and rewards within the Human Network.
+                    </p>
+
+                    <hr class="my-8 border-gray-200">
+
+                    <!-- ITLX Bridge Section --><h3 class="text-2xl font-bold post-title mb-4 border-b border-gray-200 pb-2">
+                        🌉 The ITLX Bridge: Wallet & Conversion Nexus
+                    </h3>
+                    <p class="mb-4">
+                        The ITLX Wallet/Super Wallet serves as the critical operational bridge linking the governance token, $ITLG, to the utility token, $ITL. This application is the gateway where the Human Credit Score (HCS) verification occurs, making the governance token usable in the high-velocity environment.
+                    </p>
+                    <ul class="list-disc ml-6 space-y-2 mb-6">
+                        <li>Verification Point: $ITLG, backed by the holder's HCS, is validated as genuine human-held value upon entry into the wallet.</li>
+                        <li>Conversion Mechanism: It is within the secure ITLX environment that verified $ITLG is able to be converted into $ITL, thus enabling the user to access the high-velocity transactions and marketplace of the Human Currency ($ITL).</li>
+                    </ul>
+
+                    <hr class="my-8 border-gray-200">
+
+                    <h3 class="text-2xl font-bold post-title mb-4">
+                        🔥 The Deflationary Nexus: $ITLG Burn Mechanism
+                    </h3>
+                    <p class="mb-4">
+                        The health of the dual system relies on the interplay between utility and scarcity. To sustain the long-term value and scarcity of the governance token, we have implemented a deflationary burning mechanism utilizing $ITLG.
+                    </p>
+                    <p class="mb-6 italic border-l-4 border-green-600 pl-4 text-gray-800">
+                        A portion of $ITLG is burned when collected through specific ecosystem fees, penalties from low Human Credit Scores (HCS), or through Human Node slashing events. This ensures that inactivity or malicious behavior is penalized, while active participation reinforces the token's scarcity.
+                    </p>
+                    <p class="mb-4">
+                        This mechanism maintains $ITLG’s status as a long-term store of value by balancing the issuance of new tokens (rewards for verified activity) with the removal of tokens (penalties for poor standing or specific fees). This reinforces its core purpose as the foundational asset representing verified human agency.
+                    </p>
+                    <p class="font-medium text-green-600 text-xl mt-8">
+                        The dual tokens ensure that InterLink is both functional for massive scale and secure in its governance by verified humans.
+                    </p>
+                </div>
+            </article>
+
+            <!-- POST 3: Governance & Top-of-Block Priority (EXPANDED CONTENT) --><article id="post-governance" class="article-tab card-shadow bg-white rounded-xl p-8 mb-10 hidden">
+                <div class="mb-4 text-sm font-medium text-gray-500">
+                    <span class="text-base font-medium text-indigo-600 mr-2">GOVERNANCE & CHAIN</span> • October 18, 2025
+                </div>
+                <h4 class="post-title text-3xl font-bold mb-3 hover:text-blue-700 cursor-pointer transition">
+                    Enforcing Authentic Agency: Top-of-Block Transaction Priority
                 </h4>
-                <p class="mb-4">
-                    To ensure the stability and long-term growth of the ecosystem, $ITLG integrates a deflationary burn model. A portion of $ITLG used in ecosystem transactions (like app purchases, fees, or mini-app payments) will be automatically burned, permanently removing it from circulation.
-                </p>
-                <p class="mb-4">
-                    This creates a balance between:
-                </p>
-                <ul class="list-disc ml-6 space-y-1">
-                    <li>⚖️ Utility Expansion — as more apps and users join</li>
-                    <li>🔥 Supply Reduction — preserving scarcity and long-term value</li>
-                </ul>
-                <p class="mb-6 font-medium">
-                    Through this mechanism, InterLink aligns value with real human activity, not artificial inflation.
-                </p>
+                <div class="text-lg text-gray-700">
+                    <p class="mb-6">
+                        In the evolving landscape of Web3, the integrity of a decentralized network hinges on its ability to distinguish genuine human activity from automated or malicious bot interference. The InterLink Chain addresses this fundamental challenge head-on with its groundbreaking Top-of-Block Transaction Priority mechanism, a direct manifestation of our Proof of Personhood (PoP) philosophy. This ensures that authentic human agency is not merely a theoretical ideal but a core, enforced principle of the network’s operation.
+                    </p>
 
-                <h4 class="text-xl font-medium mt-6 mb-3">
-                    📊 Allocation & Growth
-                </h4>
-                <p class="mb-6">
-                    Our long-term goal: 1 billion verified users. Once $ITLG reaches its maximum supply, holders will decide via DAO whether to maintain a fixed supply or expand strategically to welcome new Human Nodes — ensuring growth guided by collective governance.
-                </p>
+                    <h3 class="text-2xl font-bold post-title mb-4 border-b border-gray-200 pb-2">
+                        The Challenge of Bots in Decentralized Systems
+                    </h3>
+                    <p class="mb-4">
+                        Traditional blockchains often treat all transactions equally, processing them based on gas fees or arrival time. While seemingly fair, this neutrality inadvertently opens the door to Sybil attacks, bot-driven market manipulation, and the distortion of decentralized governance. Automated actors can flood networks, inflate activity metrics, front-run human trades, or monopolize voting power, eroding trust and undermining the very principles of decentralization.
+                    </p>
 
-                <!-- Conclusion --><h5 class="text-2xl font-medium post-title mt-8 mb-4">
-                    ⚡ The Evolution Continues
-                </h5>
-                <ul class="list-disc ml-6 space-y-1 mb-6">
-                    <li>Bitcoin — Decentralized Money 💰</li>
-                    <li>Ethereum — Decentralized Innovation ⚙️</li>
-                    <li>InterLink — Decentralized Humanity 🌍</li>
-                </ul>
-                <p class="mb-4 text-xl">
-                    This is not just another blockchain story — It’s the evolution of trust itself.
-                </p>
-                <p class="font-medium text-primary-blue text-xl">
-                    InterLink is where verification meets value, and humans power the chain. 💫
-                </p>
-            </div>
-        </article>
+                    <h3 class="text-2xl font-bold post-title mb-4 border-b border-gray-200 pb-2">
+                        How Top-of-Block Priority Works
+                    </h3>
+                    <p class="mb-6">
+                        The InterLink Chain’s solution is embedded directly into its block construction algorithm. When a transaction is submitted, the network first verifies the sender's identity through their InterLink ID.
+                    </p>
+                    <ul class="list-disc ml-6 space-y-2 mb-6">
+                        <li>Verified Human Transactions: Transactions originating from an InterLink ID-verified Human Node are identified as high-priority. These transactions are systematically elevated and placed at the "top" of upcoming blocks by the network's validators.</li>
+                        <li>Unverified/Automated Transactions: Transactions from addresses not linked to a verified InterLink ID, or those identified as automated (e.g., bot activity), are processed after human-verified transactions. They are relegated to lower priority slots within the block or, during periods of high network congestion, may experience delayed inclusion.</li>
+                    </ul>
+                    <p class="mb-6">
+                        This dynamic prioritization ensures that real human activity, whether it's a critical governance vote, a social interaction in a Mini-App, or a time-sensitive financial transaction, consistently receives expedited processing.
+                    </p>
 
-        <!-- POST 2: Tokenomics Update (EXPANDED CONTENT) --><article class="card-shadow bg-white rounded-xl p-8 mb-10">
-            <div class="mb-4 text-sm font-medium text-gray-500">
-                <span class="text-base font-medium text-green-600 mr-2">TOKENOMICS</span> • October 25, 2025
-            </div>
-            <h4 class="post-title text-3xl font-bold mb-3 hover:text-blue-700 cursor-pointer transition">
-                Clarifying $ITL and $ITLG: The Dual Token Strategy
-            </h4>
-            <div class="text-lg text-gray-700">
-                <p class="mb-6">
-                    The InterLink ecosystem is built upon a secure, balanced dual-token strategy designed to separate the daily function of currency from the long-term governance and scarcity of ownership. This ensures that the network can scale its utility without compromising the value proposition of its foundational, human-backed layer.
-                </p>
+                    <h3 class="text-2xl font-bold post-title mb-4 border-b border-gray-200 pb-2">
+                        Impact on InterLink Ecosystem and Web3
+                    </h3>
+                    <h4 class="text-xl font-medium mt-6 mb-3 text-primary-blue">
+                        🛡 Sybil Resistance and Fair Governance
+                    </h4>
+                    <p class="mb-4">
+                        This mechanism is a cornerstone of InterLink's Sybil resistance. In DAOs and other governance models, Top-of-Block Priority fundamentally supports the "one person, one vote" principle by ensuring that only verifiable human votes are processed with the highest importance, effectively marginalizing attempts by malicious actors to amplify their influence through multiple accounts.
+                    </p>
 
-                <h3 class="text-2xl font-bold post-title mb-4 border-b border-gray-200 pb-2">
-                    $ITL: The InterLink Utility Token (Human Currency)
-                </h3>
-                <p class="mb-4">
-                    $ITL is the essential medium of exchange—the Human Currency—within the InterLink ecosystem. It is designed for high volume, continuous circulation, enabling all interactions and transactions between verified and unverified users alike.
-                </p>
+                    <h4 class="text-xl font-medium mt-6 mb-3 text-primary-blue">
+                        ⚡ Enhanced User Experience for Humans
+                    </h4>
+                    <p class="mb-4">
+                        For everyday users, this means a more responsive and fair network. Imagine a decentralized game where human actions are never outmaneuvered by bots, or a social platform where authentic interactions are always prioritized over spam. This system creates a more equitable and enjoyable digital experience.
+                    </p>
 
-                <h4 class="text-xl font-medium mt-6 mb-3 text-primary-blue">
-                    🛠 Primary Utility
-                </h4>
-                <ul class="list-disc ml-6 space-y-2 mb-6">
-                    <li>Network Fees: Paying gas and transaction fees on the InterLink Chain.</li>
-                    <li>Mini-App Marketplace: Purchasing games, tools, subscriptions, and services from developers building within the network.</li>
-                    <li>Inter-Ecosystem Payments: Facilitating P2P payments and commerce between users and businesses authenticated by InterLink ID.</li>
-                    <li>Incentives: Used as a standard reward for basic network participation.</li>
-                </ul>
+                    <h4 class="text-xl font-medium mt-6 mb-3 text-primary-blue">
+                        🌐 A More Trustworthy Decentralized Web
+                    </h4>
+                    <p class="mb-6">
+                        By codifying human authenticity into the very fabric of transaction processing, InterLink sets a new standard for trust in decentralized networks. It creates an environment where value is genuinely aligned with human activity, fostering a more secure, transparent, and ultimately more human-centric Web3.
+                    </p>
 
-                <hr class="my-8 border-gray-200">
-
-                <h3 class="text-2xl font-bold post-title mb-4 border-b border-gray-200 pb-2">
-                    $ITLG: The InterLink Genesis Token (Proof of Humanity)
-                </h3>
-                <p class="mb-4">
-                    $ITLG is the scarce, foundational asset of the network, reserved specifically for Human Nodes (verified InterLink ID holders). It represents ownership, long-term commitment, and direct influence over the network's future.
-                </p>
-
-                <h4 class="text-xl font-medium mt-6 mb-3 text-primary-blue">
-                    🏛 Governance & Scarcity
-                </h4>
-                <ul class="list-disc ml-6 space-y-2 mb-6">
-                    <li>DAO Voting Power: Exclusive right to vote on core protocol upgrades, treasury allocation, and major strategic decisions. (Enforces the one-person, one-vote principle).</li>
-                    <li>Staking Collateral: Required to stake and run a Human Node, securing the network and earning rewards.</li>
-                    <li>Premium Access: Unlocking advanced features, priority queueing, and exclusive access to new ecosystem launches.</li>
-                    <li>Loyalty Rewards: Earned primarily through sustained, verified participation and referrals.</li>
-                </ul>
-
-                <hr class="my-8 border-gray-200">
-                <p class="font-medium text-green-600 text-xl mt-8">
-                    The dual tokens ensure that InterLink is both functional for massive scale and secure in its governance by verified humans.
-                </p>
-            </div>
-        </article>
-
-        <!-- POST 3: Governance & Top-of-Block Priority (EXPANDED CONTENT) --><article class="card-shadow bg-white rounded-xl p-8 mb-10">
-            <div class="mb-4 text-sm font-medium text-gray-500">
-                <span class="text-base font-medium text-indigo-600 mr-2">GOVERNANCE & CHAIN</span> • October 18, 2025
-            </div>
-            <h4 class="post-title text-3xl font-bold mb-3 hover:text-blue-700 cursor-pointer transition">
-                Enforcing Authentic Agency: Top-of-Block Transaction Priority
-            </h4>
-            <div class="text-lg text-gray-700">
-                <p class="mb-6">
-                    In the evolving landscape of Web3, the integrity of a decentralized network hinges on its ability to distinguish genuine human activity from automated or malicious bot interference. The InterLink Chain addresses this fundamental challenge head-on with its groundbreaking Top-of-Block Transaction Priority mechanism, a direct manifestation of our Proof of Personhood (PoP) philosophy. This ensures that authentic human agency is not merely a theoretical ideal but a core, enforced principle of the network’s operation.
-                </p>
-
-                <h3 class="text-2xl font-bold post-title mb-4 border-b border-gray-200 pb-2">
-                    The Challenge of Bots in Decentralized Systems
-                </h3>
-                <p class="mb-4">
-                    Traditional blockchains often treat all transactions equally, processing them based on gas fees or arrival time. While seemingly fair, this neutrality inadvertently opens the door to Sybil attacks, bot-driven market manipulation, and the distortion of decentralized governance. Automated actors can flood networks, inflate activity metrics, front-run human trades, or monopolize voting power, eroding trust and undermining the very principles of decentralization.
-                </p>
-
-                <h3 class="text-2xl font-bold post-title mb-4 border-b border-gray-200 pb-2">
-                    How Top-of-Block Priority Works
-                </h3>
-                <p class="mb-6">
-                    The InterLink Chain’s solution is embedded directly into its block construction algorithm. When a transaction is submitted, the network first verifies the sender's identity through their InterLink ID.
-                </p>
-                <ul class="list-disc ml-6 space-y-2 mb-6">
-                    <li>Verified Human Transactions: Transactions originating from an InterLink ID-verified Human Node are identified as high-priority. These transactions are systematically elevated and placed at the "top" of upcoming blocks by the network's validators.</li>
-                    <li>Unverified/Automated Transactions: Transactions from addresses not linked to a verified InterLink ID, or those identified as automated (e.g., bot activity), are processed after human-verified transactions. They are relegated to lower priority slots within the block or, during periods of high network congestion, may experience delayed inclusion.</li>
-                </ul>
-                <p class="mb-6">
-                    This dynamic prioritization ensures that real human activity, whether it's a critical governance vote, a social interaction in a Mini-App, or a time-sensitive financial transaction, consistently receives expedited processing.
-                </p>
-
-                <h3 class="text-2xl font-bold post-title mb-4 border-b border-gray-200 pb-2">
-                    Impact on InterLink Ecosystem and Web3
-                </h3>
-                <h4 class="text-xl font-medium mt-6 mb-3 text-primary-blue">
-                    🛡 Sybil Resistance and Fair Governance
-                </h4>
-                <p class="mb-4">
-                    This mechanism is a cornerstone of InterLink's Sybil resistance. In DAOs and other governance models, Top-of-Block Priority fundamentally supports the "one person, one vote" principle by ensuring that only verifiable human votes are processed with the highest importance, effectively marginalizing attempts by malicious actors to amplify their influence through multiple accounts.
-                </p>
-
-                <h4 class="text-xl font-medium mt-6 mb-3 text-primary-blue">
-                    ⚡ Enhanced User Experience for Humans
-                </h4>
-                <p class="mb-4">
-                    For everyday users, this means a more responsive and fair network. Imagine a decentralized game where human actions are never outmaneuvered by bots, or a social platform where authentic interactions are always prioritized over spam. This system creates a more equitable and enjoyable digital experience.
-                </p>
-
-                <h4 class="text-xl font-medium mt-6 mb-3 text-primary-blue">
-                    🌐 A More Trustworthy Decentralized Web
-                </h4>
-                <p class="mb-6">
-                    By codifying human authenticity into the very fabric of transaction processing, InterLink sets a new standard for trust in decentralized networks. It creates an environment where value is genuinely aligned with human activity, fostering a more secure, transparent, and ultimately more human-centric Web3.
-                </p>
-
-                <p class="font-medium text-indigo-600 text-xl mt-8">
-                    Top-of-Block Priority is not just a technical feature; it is a declaration of InterLink's commitment to building a blockchain where real people always come first.
-                </p>
-                
-            </div>
-        </article>
+                    <p class="font-medium text-indigo-600 text-xl mt-8">
+                        Top-of-Block Priority is not just a technical feature; it is a declaration of InterLink's commitment to building a blockchain where real people always come first.
+                    </p>
+                    
+                </div>
+            </article>
+        </div>
     </main>
 
     <!-- Footer with Disclaimer --><footer class="bg-gray-800 mt-16 py-8">
@@ -344,5 +415,40 @@
         </div>
     </footer>
 
+    <!-- JavaScript for Tab Functionality --><script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const initialTab = document.querySelector('.tab-button');
+            if (initialTab) {
+                // Ensure the first tab's content is visible on load
+                showTab(initialTab.getAttribute('data-target'));
+            }
+        });
+
+        function showTab(targetId) {
+            // 1. Hide all articles
+            document.querySelectorAll('.article-tab').forEach(article => {
+                article.classList.add('hidden');
+            });
+
+            // 2. Remove 'active' class from all buttons
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active', 'bg-gray-100');
+                button.classList.add('bg-white');
+            });
+
+            // 3. Show the targeted article
+            const targetArticle = document.getElementById(targetId);
+            if (targetArticle) {
+                targetArticle.classList.remove('hidden');
+            }
+
+            // 4. Set the 'active' class on the clicked button
+            const clickedButton = document.querySelector(`.tab-button[data-target="${targetId}"]`);
+            if (clickedButton) {
+                clickedButton.classList.add('active', 'bg-gray-100');
+                clickedButton.classList.remove('bg-white');
+            }
+        }
+    </script>
 </body>
 </html>
